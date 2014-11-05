@@ -38,9 +38,6 @@
         <includes>
           <include>AndroidManifest.xml</include>
         </includes>
-        <excludes>
-          <exclude>build/**/*</exclude>
-        </excludes>
       </resource>
     </resources>
 

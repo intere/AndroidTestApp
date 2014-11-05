@@ -6,6 +6,7 @@ The purpose of this app is to determine the path from starting an initial (gradl
 * ``step_1`` - This is the initial commit (fresh android project, created via the Android Studio), still using gradle.
 * ``step_2`` - This is my first stab at getting this to build with maven.  I'm pretty close (I think), but I'm getting some issues that have to do with code generation.
 * ``step_3`` - I finally figured it out (building with maven).  There are some ugly caveats associated with it though (see the troubleshooting area).
+* ``step_4`` - I figured out how to allow both gradle and maven to co-exist.  Essentially I've just added an exclusion to one of the sets of resources.
 
 ## Building
 To build the project, do the following:
