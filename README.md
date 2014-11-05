@@ -35,7 +35,15 @@ Does it not work for you?  See the [``Troubleshooting``](#troubleshooting) secti
 
 ## Tools
 Since I can't seem to find the Maven Support Jars anywhere, I've authored a script to install them on your behalf.  Just make sure you define your ``ANDROID_HOME`` environment variable to resolve to the base of your Android SDK.
-*
+```bash
+./install-jars.sh
+installed android-support-v13:
+<dependency>
+  <groupId>com.google.android</groupId>
+  <artifactId>android-support-v13</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
 
 <a name="troubleshooting"></a>
 ## Troubleshooting
@@ -47,10 +55,18 @@ Are you running ``mvn clean install`` and seeing errors like this?
 You will need to nuke the ``app/build`` folder before you build:
 ```bash
 rm -rf app/build
-
 ```
 
-Note, you will need maven 3.1.1 at a minimum (requirement of the android-maven-plugin):
+Trying to run ``mvn clean install`` and seeing output like this?
 ```bash
 [ERROR] Failed to execute goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2:generate-sources (default-generate-sources) on project android-test: The plugin com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2 requires Maven version 3.1.1 -> [Help 1]
 ```
+You will need maven 3.1.1 at a minimum (requirement of the android-maven-plugin):
+
+Having issues running the install-jars.sh script?
+If you do not set your ``ANDROID_HOME`` environment variable, the output will look like this:
+```bash
+./install-jars.sh
+Error: You didn't set the ANDROID_HOME Environment Variable
+```
+Set your ``ANDROID_HOME`` environment variable and try again.

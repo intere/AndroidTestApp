@@ -2,7 +2,7 @@
 
 if [ "${ANDROID_HOME}" == "" ] ; then
   echo "Error: You didn't set the ANDROID_HOME Environment Variable";
-  return 1;
+  exit 1;
 fi
 
 SUPPORT_V13_JAR="${ANDROID_HOME}/extras/android/support/v13/android-support-v13.jar";
