@@ -27,6 +27,9 @@
       <resource>
         <directory>${basedir}</directory>
         <targetPath>src/main/res</targetPath>
+        <excludes>
+          <exclude>build/**/*</exclude>
+        </excludes>
       </resource>
       <resource>
         <targetPath>${project.basedir}/src</targetPath>
@@ -35,6 +38,9 @@
         <includes>
           <include>AndroidManifest.xml</include>
         </includes>
+        <excludes>
+          <exclude>build/**/*</exclude>
+        </excludes>
       </resource>
     </resources>
 
